@@ -25,6 +25,13 @@ PyMap was a fun project that I worked on as a part of my Major Work. It was orig
 | window.main_program_font     	| pygmae.font          	| The font object, this does not render stuff nor is a ttf file or anything like that. This just sets a constant value containing paramaters: font type, size, bold, italic.                                                                                                        	| pygame.font.SysFont('candara', 24, bold=True)           	|
 | window.program_h1_title_text 	| pygame.surface       	| This is a rendered surface of specific text. with different parameters to the variable above such as antialiasing, color, bg color etc and things that as specific  to a surface                                                                                                  	| elf.main_program_font.render("PyMap", 1, (255,255,255)) 	|
 
+## Data flow diagram
+
+<img src="https://raw.githubusercontent.com/JoshuaDRose/PYMAP/963007af02a67987bad2cb2e933c50c0d49ec5fe/docs/MAJOR%20WORK%20DFD.svg"
+     alt="Markdown Monster icon"
+     width="500"
+     style="float: left; margin-right: 10px;" />
+
 ## Credits 
 Credit where credit is due so i dont fail :)
 
