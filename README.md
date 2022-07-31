@@ -18,3 +18,10 @@ Some inspriation for the UI/design layout of this project came from this image: 
 
 Side note:
 > I regretfully spent only 12 hours building this as I left my computer at school and it was exams and i dislike myself. Its almost 1 am and i have exams tomorrow.
+
+
+
+
+<img src="https://raw.githubusercontent.com/JoshuaDRose/JoshuaDRose/main/image_2022-07-31_235732925.png"
+     alt="Markdown Monster icon"
+     style="float: left; margin-right: 10px;" />
