@@ -1,0 +1,19 @@
+textbox.py:
+  - set underline animation when hover over button
+  - add text 
+window.py:
+  - add sprites instead of colors boxes
+  - draw border for buttons on top bar
+  - add a visual function to display errors such as permission error
+button.py:
+  - add collision detection 
+  - make boxes ticks and crosses without text
+
+
+NOTES:
+  - installation screen 1:
+    - would you like to install a libarary of songs
+  - screen 2:
+    - Choose install location?
+ - potential mnames:
+   - pyplayer (with pie icon)
