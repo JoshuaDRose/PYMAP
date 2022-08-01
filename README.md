@@ -31,7 +31,7 @@ PyMap was a fun project that I worked on as a part of my Major Work. It was orig
 
 ## Data flow diagram
 
-<img src="https://raw.githubusercontent.com/JoshuaDRose/PYMAP/963007af02a67987bad2cb2e933c50c0d49ec5fe/docs/MAJOR%20WORK%20DFD.svg"
+<img src="https://raw.githubusercontent.com/JoshuaDRose/PYMAP/41a7af1627227ab8e981cd2968a038c3eb784e91/docs/MAJOR%20WORK%20DFD.svg"
      alt="Markdown Monster icon"
      width="500"
      style="float: left; margin-right: 10px;" />
