@@ -8,7 +8,7 @@ PyMap was a fun project that I worked on as a part of my Major Work. It was orig
      width="500"
      style="float: left; margin-right: 10px;" />
      
-## Demo
+## Visual Demonstration
 [![Thing I Made](https://yt-embed.herokuapp.com/embed?v=pKOSG7_dsTw)](https://www.youtube.com/watch?v=pKOSG7_dsTw "Thing I Made")
 ## Detailed Overview
 ### src.player.Player
