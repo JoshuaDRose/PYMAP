@@ -1,35 +1,37 @@
----
-name: CI
-
-on:
-  push:
-    branches: ["master"]
-  pull_request:
-    branches: ["master"]
-  workflow_dispatch:
-
-jobs:
-  tests:
-    name: "Python ${{ matrix.python-version }}"
-    runs-on: "ubuntu-latest"
-    env:
-      USING_COVERAGE: '3.9,3.10'
-
-    strategy:
-      matrix:
-        python-version: ["3.9", "3.10", "pypy3"]
-
-    steps:
-      - uses: "actions/checkout@v2"
-      - uses: "actions/setup-python@v2"
-        with:
-          python-version: "${{ matrix.python-version }}"
-      - name: "Install dependencies"
-        run: |
-          python -VV
-          python -m site
-          python -m pip install --upgrade pip setuptools wheel
-          python -m pip install --upgrade coverage[toml] virtualenv tox tox-gh-actions          
-
-      - name: "Run tox targets for ${{ matrix.python-version }}"
-        run: "python -m tox"
+name: CI Pipeline  
+  
+on:  
+  pull_request:  
+    types: [ opened, synchronize ]  
+  
+  
+jobs:  
+  ci-pipeline:  
+    runs-on: ubuntu-latest  
+    steps:  
+      - name: Checkout  
+        uses: actions/checkout@v2  
+      - name: Get changed files  
+        uses: dorny/paths-filter@v2  
+        id: filter  
+        with:  
+          list-files: shell  
+          filters: |  
+            py_modified:  
+              - added|modified: "./**/*.py"  
+      - name: Setup Python  
+        if: ${{ steps.filter.outputs.py_modified == 'true' }}  
+        uses: actions/setup-python@v2  
+        with:  
+          python-version: 3.10.0  
+          architecture: x64  
+          cache: 'pip'  
+      - name: Install dependencies  
+        if: ${{ steps.filter.outputs.py_modified == 'true' }}  
+        run: pip install -r requirements.txt  
+      - name: Run flake8  
+        if: ${{ steps.filter.outputs.py_modified == 'true' }}  
+        run: flake8 ${{ steps.filter.outputs.py_modified_files }}  
+      - name: Run pytest  
+        if: ${{ steps.filter.outputs.py_modified == 'true' }}  
+        run: pytest tests
