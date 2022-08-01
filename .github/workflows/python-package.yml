@@ -15,4 +15,13 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - name: Install dependencies
-        run: python -m pip install -r 'src/requirements.txt'
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r 'src/requirements.txt'
+          pip install pytest
+          pip install flake8
+      - name: Testing stuff with the flake 8 module 
+        run: |
+          flake8 .
+        continue-on-error: true
+      
