@@ -47,7 +47,7 @@ PyMap was a fun project that I worked on as a part of my Major Work. It was orig
 |---------------	|----------	|-------------------------------------------------------------------	|-----------------	|
 | data          	| dict     	| This data dictionary is for storing the settings file information 	| {}              	|
 | file          	| str      	| the file to load in pythons fileio system with open(file)         	| 'settings.json' 	|
-| load_settings 	| function 	| the function that stores the information and does the processing  	|                 	|               	|          	|                                                                   	|                 	|
+| load_settings 	| function 	| the function that stores the information and does the processing  	|                 	|
 
 <br>
 
