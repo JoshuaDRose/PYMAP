@@ -16,6 +16,7 @@ player = Player()
 window = Window()
 
 def main():
+	""" Run event loop in window """
 	window.main_loop()
 
 if __name__ == "__main__":
