@@ -2,10 +2,15 @@
 [![CI Pipeline](https://github.com/JoshuaDRose/PYMAP/actions/workflows/main.yml/badge.svg)](https://github.com/JoshuaDRose/PYMAP/actions/workflows/main.yml)
 ## Description
 PyMap was a fun project that I worked on as a part of my Major Work. It was originally much more complex but then I had to cut it down. This version was built in a lot shorter amount of time as i wasn't very smart about putting stuff in the cloud. Anyhow, the features come pretty basic but there is still refining to do. You can install it however you will need to run a requirements file. 
+## Event Loop
+<img src="https://raw.githubusercontent.com/JoshuaDRose/PYMAP/41a7af1627227ab8e981cd2968a038c3eb784e91/docs/MAJOR%20WORK%20DFD.svg"
+     alt="Markdown Monster icon"
+     width="500"
+     style="float: left; margin-right: 10px;" />
+     
 ## Demo
 [![Thing I Made](https://yt-embed.herokuapp.com/embed?v=pKOSG7_dsTw)](https://www.youtube.com/watch?v=pKOSG7_dsTw "Thing I Made")
-
-## Data dictionaries
+## Detailed Overview
 ### src.player.Player
 | Name                         	| Type                 	| Description                                                                                                                                                                                                                                                                       	| Value                                                   	|
 |------------------------------	|----------------------	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|---------------------------------------------------------	|
@@ -80,16 +85,9 @@ PyMap was a fun project that I worked on as a part of my Major Work. It was orig
 | TextBox.constructor.rect        	| pygame.Rect                                 	| similar to the previous variable, pygame also recommends a rect value as each surface only has a width and a height so it is needing a rect to have (x, y, width, height) which can be updated as the surface 	| pygame.Rect                 	|
 | TextBox.constructor.description 	| str                                         	| This description is a string value that is later rendered as an actual piece of text that can be drawn on the pygame display.                                                                                 	| null                            	|
 
-
-## Data flow diagram
-
-<img src="https://raw.githubusercontent.com/JoshuaDRose/PYMAP/41a7af1627227ab8e981cd2968a038c3eb784e91/docs/MAJOR%20WORK%20DFD.svg"
-     alt="Markdown Monster icon"
-     width="500"
-     style="float: left; margin-right: 10px;" />
-
 ## Credits 
 Credit where credit is due so i dont fail :)
+<hr>
 
 
 ### Art
