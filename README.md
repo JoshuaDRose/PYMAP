@@ -11,7 +11,8 @@ PyMap was a fun project that I worked on as a part of my Major Work. It was orig
 ## Visual Demonstration
 [![Thing I Made](https://yt-embed.herokuapp.com/embed?v=pKOSG7_dsTw)](https://www.youtube.com/watch?v=pKOSG7_dsTw "Thing I Made")
 ## Detailed Overview
-### src.player.Player
+ > Categorized by file
+
 | Name                         	| Type                 	| Description                                                                                                                                                                                                                                                                       	| Value                                                   	|
 |------------------------------	|----------------------	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|---------------------------------------------------------	|
 | console_thread               	| threading.Thread     	| Allows for the console to run concurrently to the main program                                                                                                                                                                                                                    	| threading.Thread                                        	|
@@ -23,7 +24,9 @@ PyMap was a fun project that I worked on as a part of my Major Work. It was orig
 | player.song_list             	| str array            	| an array of strings which can be then loaded with pygame.mixer to play an audio file                                                                                                                                                                                              	| null                                                    	|
 | player.song_channel          	| pygame.mixer.Channel 	| A channel object which controls audio, volume etc                                                                                                                                                                                                                                 	| pygame.mixer.Channel                                    	|
 | player.songs                 	| null                 	| not implemented in final release                                                                                                                                                                                                                                                  	| null                                                    	|
-### src.window.Window
+
+<br>
+
 | Name                         	| Type                 	| Description                                                                                                                                                                                                                                                                       	| Value                                                   	|
 |------------------------------	|----------------------	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|---------------------------------------------------------	|
 | window.settings              	| dict                 	| a list of settings that contain things such as the last window state etc. this was not implemented very well in the end                                                                                                                                                           	| {}                                                      	|
@@ -37,14 +40,17 @@ PyMap was a fun project that I worked on as a part of my Major Work. It was orig
 | window.install_wizard_page   	| int                  	| The install wizard screens are controlled by integers. in window.py file, the conditionals dictate whether a screen has been updated or not. By incrementing this variable, a conditional is released.                                                                            	| 0                                                       	|
 | window.main_program_font     	| pygmae.font          	| The font object, this does not render stuff nor is a ttf file or anything like that. This just sets a constant value containing paramaters: font type, size, bold, italic.                                                                                                        	| ```pygame.font.SysFont('candara', 24, bold=True)```           	|
 | window.program_h1_title_text 	| pygame.surface       	| This is a rendered surface of specific text. with different parameters to the variable above such as antialiasing, color, bg color etc and things that as specific  to a surface                                                                                                  	| ```self.main_program_font.render("PyMap", 1, (255,255,255))``` 	|
-### src.utils.load_settings
+
+<br>
+
 | Name          	| Type     	| Description                                                       	| Value           	|
 |---------------	|----------	|-------------------------------------------------------------------	|-----------------	|
 | data          	| dict     	| This data dictionary is for storing the settings file information 	| {}              	|
 | file          	| str      	| the file to load in pythons fileio system with open(file)         	| 'settings.json' 	|
 | load_settings 	| function 	| the function that stores the information and does the processing  	|                 	|               	|          	|                                                                   	|                 	|
 
-### src.utils.save_settings
+<br>
+
 | Name          	| Type       	| Description                                                       	| Value    	|
 |---------------	|------------	|-------------------------------------------------------------------	|----------	|
 | save_settings 	| function   	| The function that stores the information and does the processing. 	| function 	|
@@ -52,7 +58,8 @@ PyMap was a fun project that I worked on as a part of my Major Work. It was orig
 | data          	| dictionary 	| data stores the loaded information that is passed from the file   	| {}       	|
 | f             	| object     	| the file object that can be accessed and loaded information from  	| file.io  	|
 
-### src.utils.get_display_size
+<br>
+
 | Name              	| Type           	| Description                                                                                                                	| Value                 	|
 |-------------------	|----------------	|----------------------------------------------------------------------------------------------------------------------------	|-----------------------	|
 | get_display_size  	| function       	| The function that stores the information and does the processing.                                                          	| function              	|
@@ -61,7 +68,8 @@ PyMap was a fun project that I worked on as a part of my Major Work. It was orig
 | y                 	| int            	| the saved y value from screen.get_size()                                                                                   	| file.io               	|
 | screen.get_size() 	| tuple          	| returns the x and y of a surface                                                                                           	| relative to screen    	|
 
-### src.utils.install_samples
+<br>
+
 | Name            	| Type       	| Description                                                                                                                                  	| Value        	|
 |-----------------	|------------	|----------------------------------------------------------------------------------------------------------------------------------------------	|--------------	|
 | install_samples 	| function   	| function which holds, loads sends and processes data. This function is for installing songs using the requests module                        	| returns null 	|
@@ -69,14 +77,16 @@ PyMap was a fun project that I worked on as a part of my Major Work. It was orig
 | done            	| global     	| inherited from global scope. 'Done' is a boolean value to state if the samples install has been completed.                                   	| False        	|
 | data            	| dictionary 	| data is a value to store the loaded data from file. In this case the data is then later indexed in a for loop  in the following code segment 	| {}           	|
 
-### src.utils.data_size
+<br>
+
 | Name      	| Type       	| Description                                                                                                                                                                                     	| Value       	|
 |-----------	|------------	|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|-------------	|
 | data_size 	| function   	| Function which loads holds sends and processes data. in this case data_size is to get the amount of install sample songs for the progress bar later referenced in src.progbar.ProgressBar class 	| returns int 	|
 | data      	| dictionary 	| data is for holding the json data that is passed into the data_size function as a file argument (file bieng a string but not referenced in this data dictionary as it is a parameter            	| {}          	|
 | songs     	| list       	| contains string song urls which are loaded from aforementioned data variable                                                                                                                    	| []          	|
 
-### src.textbox.TextBox.__init__
+<br>
+
 | Name                            	| Type                                        	| Description                                                                                                                                                                                                   	| Value                       	|
 |---------------------------------	|---------------------------------------------	|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|-----------------------------	|
 | TextBox                         	| object(inherited from pygame.sprite.Sprite) 	| class which as stated previously, inherits both functions and class variables of the pygame.sprite.Sprite class which now allocates text box as a class which is treated as a sprite by the program           	| does not have a return type 	|
