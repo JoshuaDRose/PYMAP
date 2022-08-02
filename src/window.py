@@ -37,7 +37,7 @@ class Window():
 		if not self.settings['download_box_shown']:
 			self.install_folder = os.path.normpath(os.path.join(os.environ['USERPROFILE'],'music'))
 			self.install_wizard_page = 1			
-			self.preview_popup.add(TextBox([self.dw / 2-self.tb_w / 2, self.dh / 2 - self.tb_h / 2], [self.tb_w, self.tb_h], "Install Wizard", "Would you like to install a default song library?"))
+			self.preview_popup.add(TextBox([self.dw / 2 - self.tb_w / 2, self.dh / 2 - self.tb_h / 2], [self.tb_w, self.tb_h], "Install Wizard", "Would you like to install a default song library?"))
 		else:
 			self.install_folder = self.settings['install_folder']
 		self.confirm_done = False
@@ -62,7 +62,7 @@ class Window():
 	def file_browser(self):
 		""" https://stackoverflow.com/questions/63801960/ """
 		r = tkinter.Tk()
-		r.withdraw() # hide window
+		r.withdraw()  # hide window
 		file_name = tkinter.filedialog.askopenfilename(initialdir=self.install_folder, parent=r)
 		r.destroy()
 		self.song_queued = True
@@ -142,17 +142,17 @@ class Window():
 						elif mp[0] in range(765, 790) and mp[1] in range(435, 460):
 							if self.install_wizard_page == 1:
 								self.install_wizard_page += 1
-								self.preview_popup.add(TextBox([self.dw / 2 - self.tb_w / 2, self.dh / 2 - self.tb_h / 2], [self.tb_w,self.tb_h], "Install Wizard", f"{self.install_folder}\nChoose different install location?"))
+								self.preview_popup.add(TextBox([self.dw / 2 - self.tb_w / 2, self.dh / 2 - self.tb_h / 2], [self.tb_w, self.tb_h], "Install Wizard", f"{self.install_folder}\nChoose different install location?"))
 
 							if self.install_wizard_page == 2:
 								self.folder_browser()
 								self.clear_popup()
-								self.preview_popup.add(TextBox([self.dw / 2 - self.tb_w / 2, self.dh / 2 - self.tb_h / 2],[self.tb_w,self.tb_h], "Install Wizard", "Installing Sample Library"))
+								self.preview_popup.add(TextBox([self.dw / 2 - self.tb_w / 2, self.dh / 2 - self.tb_h / 2], [self.tb_w,self.tb_h], "Install Wizard", "Installing Sample Library"))
 								for sprite in self.preview_popup:
 									for button in sprite.button_sprites:
 										button.visible = False
-								install_thread = threading.Thread(target=utils.install_samples, args=(os.path.join('../meta', 'default.json'), self.install_folder))
-								install_thread.daemon=True
+								install_thread = threading.Thread(target = utils.install_samples, args=(os.path.join('../meta', 'default.json'), self.install_folder))
+								install_thread.daemon = True
 								install_thread.start()
 								self.clear_popup()
 						elif mp[0] in range(625, 665) and mp[1] in range(420, 460):
