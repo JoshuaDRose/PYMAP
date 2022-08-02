@@ -2,4 +2,4 @@ import pygame
 
 pygame.init()
 
-assert pygame.get_init() == True
+assert pygame.get_init() is True
