@@ -2,7 +2,6 @@
 import os
 import utils
 import pygame
-import install
 
 
 class StatusBar(object):
