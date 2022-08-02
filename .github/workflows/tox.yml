@@ -1,0 +1,44 @@
+name: Tox
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  main:
+    strategy:
+      matrix:
+        include:
+        # linux
+        - os: ubuntu-latest
+          python: 3.9
+          toxenv: py
+        - os: ubuntu-latest
+          python: '3.10.0-alpha - 3.10.999'
+          toxenv: py
+        # windows
+        - os: windows-latest
+          python: '3.10.0-alpha - 3.10.999'
+          toxenv: py
+        # misc
+        - os: ubuntu-latest
+          python: 3.9
+          toxenv: docs
+        - os: ubuntu-latest
+          python: 3.9
+          toxenv: linters
+        - os: ubuntu-latest
+          python: 3.9
+          toxenv: dogfood
+    runs-on: ${{ matrix.os }}
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python }}
+    - run: python -mpip install --upgrade setuptools pip tox virtualenv
+    - run: tox -e ${{ matrix.toxenv }}
