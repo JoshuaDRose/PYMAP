@@ -6,9 +6,8 @@ class PlayerButton(pygame.sprite.Sprite):
 		pygame.sprite.Sprite.__init__(self)
 		self.position = position
 		self.size = size
-		self.image = pygame.image.load(os.path.join('../assets', image+'.png'))
+		self.image = pygame.image.load(os.path.join('../assets', image + '.png'))
 		self.rect = self.image.get_rect()
 		self.rect.x = self.position[0]
 		self.rect.y = self.position[1]
 		self.hovering = False
-		
