@@ -35,8 +35,6 @@ class TextBox(pygame.sprite.Sprite):
 				self.fontsize = 28
 				self.font_desc = pygame.font.SysFont(self.face, self.fontsize)
 				self.desc_text.append(self.font_desc.render(line, 1, [0, 0, 0]))
-			
-
 		# =========================== #
 		# -------- HEADER ----------- #
 		# =========================== #
@@ -55,7 +53,7 @@ class TextBox(pygame.sprite.Sprite):
 		for POSITION, RENDERED_TEXT in enumerate(self.desc_text):
 			middle = self.rect.height / 2
 			text_height = self.font_desc.size(self.to_render[POSITION])[1] / 2
-			self.image.blit(RENDERED_TEXT, [self.rect.width / 2-self.font_desc.size(self.to_render[POSITION])[0] / 2, middle + text_height + height])
+			self.image.blit(RENDERED_TEXT, [self.rect.width / 2 - self.font_desc.size(self.to_render[POSITION])[0] / 2, middle + text_height + height])
 			height += self.font_desc.size(self.to_render[POSITION])[1]
 
 		self.button_affirm = Button([self.rect.width - 100, self.rect.height - 50], [25, 25], self.button_affirm_color, (0, 255, 0), tick=True)
