@@ -3,8 +3,6 @@ from window import *
 from utils import *
 from player import *
 
-import pygame
-import requests
 import threading
 import console
 
@@ -21,6 +19,7 @@ window = Window()
 def main():
 	window.main_loop()
 
+	
 if __name__ == "__main__":
 	main()
 	
