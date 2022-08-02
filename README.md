@@ -6,7 +6,7 @@
 ![lastcommit](https://img.shields.io/github/last-commit/JoshuaDRose/PYMAP)
 ![GitHub closed issues](https://img.shields.io/github/issues-closed/JoshuaDRose/PYMAP)
 ## Description
-PyMap was a fun project that I worked on as a part of my Major Work. It was originally much more complex but then I had to cut it down. This version was built in a lot shorter amount of time as i wasn't very smart about putting stuff in the cloud. Anyhow, the features come pretty basic but there is still refining to do. You can install it however you will need to run a requirements file. 
+PyMap was a fun project that I worked on for my major. It was originally much more complex but then I had to cut it down. This version was built in a lot shorter amount of time as i wasn't very smart about putting stuff in the cloud. Anyhow, the features come pretty basic but there is still refining to do. You can install it however you will need to run a requirements file. 
 ## Event Loop
 <img src="https://raw.githubusercontent.com/JoshuaDRose/PYMAP/41a7af1627227ab8e981cd2968a038c3eb784e91/docs/MAJOR%20WORK%20DFD.svg"
      alt="Markdown Monster icon"
