@@ -22,21 +22,15 @@ jobs:
             py_modified:  
               - added|modified: "./**/*.py"  
       - name: Setup Python  
-        if: ${{ steps.filter.outputs.py_modified == 'true' }}  
         uses: actions/setup-python@v2  
         with:  
           python-version: 3.10.0  
           architecture: x64  
           cache: 'pip'  
       - name: Install dependencies  
-        if: ${{ steps.filter.outputs.py_modified == 'true' }}  
         run: |
           pip install -r requirements.txt
           pipenv install
-          
-      - name: Run flake8  
-        if: ${{ steps.filter.outputs.py_modified == 'true' }}  
-        run: flake8 ${{ steps.filter.outputs.py_modified_files }}  
       - name: Run pytest  
         if: ${{ steps.filter.outputs.py_modified == 'true' }}  
         run: pytest tests
