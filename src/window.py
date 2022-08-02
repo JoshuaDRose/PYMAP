@@ -151,7 +151,7 @@ class Window():
 								for sprite in self.preview_popup:
 									for button in sprite.button_sprites:
 										button.visible = False
-								install_thread = threading.Thread(target = utils.install_samples, args=(os.path.join('../meta', 'default.json'), self.install_folder))
+								install_thread = threading.Thread(target=utils.install_samples, args=(os.path.join('../meta', 'default.json'), self.install_folder))
 								install_thread.daemon = True
 								install_thread.start()
 								self.clear_popup()
