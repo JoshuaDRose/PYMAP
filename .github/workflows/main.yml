@@ -27,10 +27,9 @@ jobs:
           python-version: 3.10.0  
           architecture: x64  
           cache: 'pip'  
-      - name: Install dependencies  
-        run: |
-          pip install -r requirements.txt
-          pipenv install
+      - name: Install pipenv 
+        run: pip install pipenv
+      - name: Run pipenv 
+        run: pipenv install
       - name: Run pytest  
-        if: ${{ steps.filter.outputs.py_modified == 'true' }}  
         run: pytest tests
