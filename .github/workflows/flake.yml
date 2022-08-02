@@ -22,4 +22,4 @@ jobs:
           pip install --upgrade pip
           pip install -r 'src/requirements.txt'
           pip install flake8
-          flake8 .
+          flake8 --ignore=E111,E231,E275,E302,E501,E703,F403,F405,W191,W291,W293
