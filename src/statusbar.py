@@ -18,12 +18,11 @@ class StatusBar(object):
 		self.current_chunk = 0
 		self.chunk_surfaces = []
 		self.chunk_pos_x = 0
-		self.chunk_width = round(self.size[0]/self.data)
+		self.chunk_width = round(self.size[0] / self.data)
 		for chunk in range(self.data):
 			chunk = pygame.Surface([self.chunk_width, self.size[1]])
 			self.chunk_surfaces.append(chunk)
 		self.chunks_visible = 0
-
 
 	def update(self):
 		""" Update the status bar by a certain amount """
