@@ -13,9 +13,6 @@ jobs:
     steps:  
       - name: Checkout  
         uses: actions/checkout@v2  
-      - name: Get changed files  
-        uses: dorny/paths-filter@v2  
-        id: filter  
       - name: Setup Python  
         uses: actions/setup-python@v2  
         with:  
