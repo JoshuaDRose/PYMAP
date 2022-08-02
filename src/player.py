@@ -7,7 +7,6 @@ import glob
 from threading import *
 
 class Player():
-
 	def __init__(self):
 		pygame.mixer.pre_init(frequency=44100, size=-16, channels=2, buffer=512)
 		pygame.mixer.init()
