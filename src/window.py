@@ -27,7 +27,7 @@ class Window():
 		self.tb_w,self.tb_h = 450, 250
 		self.install_wizard_page = 0
 		self.main_program_font = pygame.font.SysFont('candara', 24, bold=True)
-		self.program_h1_title_text = self.main_program_font.render("PyMap", 1, (255, 255,2 55))
+		self.program_h1_title_text = self.main_program_font.render("PyMap", 1, (255, 255,255))
 		self.image = pygame.image.load(os.path.join('../assets', 'program_icon.png')).convert()
 		self.image = pygame.transform.scale(self.image, (25, 25))
 		self.image.set_colorkey([255, 255, 255])
