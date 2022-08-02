@@ -49,7 +49,7 @@ class Window():
 	def folder_browser(self):
 		""" https://stackoverflow.com/questions/63801960/ """
 		r = tkinter.Tk()
-		r.withdraw()  
+		r.withdraw()
 		folder_name = tkinter.filedialog.askdirectory(initialdir=self.install_folder, parent=r)
 		r.destroy()
 		self.install_folder = folder_name
@@ -235,7 +235,7 @@ class Window():
 			self.player_window.draw()
 
 			pygame.display.update()
-			self.clock.tick(60)
+			clock.tick(60)
 		pygame.quit()
 		sys.exit()
 		
