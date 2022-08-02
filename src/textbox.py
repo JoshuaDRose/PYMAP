@@ -45,7 +45,7 @@ class TextBox(pygame.sprite.Sprite):
 		self.header_rect.x = 0
 		self.header_rect.y = 0
 		self.header_bar.fill((140, 140, 140))
-		self.header_bar.blit(self.title_text, [self.header_rect.width / 2 - self.font_title.size(title)[0] / 2,3])
+		self.header_bar.blit(self.title_text, [self.header_rect.width / 2 - self.font_title.size(title)[0] / 2, 3])
 		self.image.blit(self.header_bar, self.header_rect)
 
 		# ============================= #
@@ -55,11 +55,11 @@ class TextBox(pygame.sprite.Sprite):
 		for POSITION, RENDERED_TEXT in enumerate(self.desc_text):
 			middle = self.rect.height / 2
 			text_height = self.font_desc.size(self.to_render[POSITION])[1] / 2
-			self.image.blit(RENDERED_TEXT, [self.rect.width / 2-self.font_desc.size(self.to_render[POSITION])[0] / 2,middle + text_height + height])
+			self.image.blit(RENDERED_TEXT, [self.rect.width / 2-self.font_desc.size(self.to_render[POSITION])[0] / 2, middle + text_height + height])
 			height += self.font_desc.size(self.to_render[POSITION])[1]
 
 		self.button_affirm = Button([self.rect.width - 100, self.rect.height - 50], [25, 25], self.button_affirm_color, (0, 255, 0), tick=True)
-		self.button_decline = Button(100, self.rect.height - 50], [25, 25],self.button_decline_color, (255, 0, 0), cross=True)
+		self.button_decline = Button([100, self.rect.height - 50], [25, 25], self.button_decline_color, (255, 0, 0), cross=True)
 
 		self.button_sprites.add(self.button_affirm)
 		self.button_sprites.add(self.button_decline)
