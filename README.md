@@ -1,5 +1,5 @@
 # Pymap 🦉
-[![Pipeline](https://github.com/JoshuaDRose/PYMAP/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/JoshuaDRose/PYMAP/actions/workflows/main.yml)
+[![CI Pipeline](https://github.com/JoshuaDRose/PYMAP/actions/workflows/main.yml/badge.svg)](https://github.com/JoshuaDRose/PYMAP/actions/workflows/main.yml)
 [![pytest](https://github.com/JoshuaDRose/PYMAP/actions/workflows/pytest.yml/badge.svg?branch=main)](https://github.com/JoshuaDRose/PYMAP/actions/workflows/pytest.yml)
 [![flake](https://github.com/JoshuaDRose/PYMAP/actions/workflows/flake.yml/badge.svg?branch=main)](https://github.com/JoshuaDRose/PYMAP/actions/workflows/flake.yml)
 ## Description
