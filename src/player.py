@@ -1,10 +1,7 @@
 import os
-import sys
 import pygame
 import utils
 import glob
-
-from threading import *
 
 class Player():
 	def __init__(self):
