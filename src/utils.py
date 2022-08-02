@@ -1,5 +1,4 @@
 """ Basic functions for assisting with song and data loading """
-import os
 import glob
 import json
 import pygame
