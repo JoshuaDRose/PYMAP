@@ -25,4 +25,4 @@ jobs:
       - name: Run pipenv 
         run: pipenv install
       - name: Run pytest  
-        run: pytest tests
+        run: pytest -vs tests/test_instances.py
