@@ -1,27 +1,11 @@
 name: Python
 
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
-
-env:
-  PYTEST_ADDOPTS: "--color=yes"
-  
 jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
         matrix: 
           python-version: ["3.10"]
-          include:
-            - name: "windows-py310"
-              python: "3.10"
-              os: windows-latest
-              tox_env: "py310-xdist"
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v4
