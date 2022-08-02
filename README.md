@@ -1,7 +1,6 @@
 # Pymap 🦉
 ![version](https://img.shields.io/github/v/tag/JoshuaDRose/PYMAP?include_prereleases)
 ![mainained](https://img.shields.io/maintenance/yes/2022)
-![flake](https://img.shields.io/github/v/tag/JoshuaDRose/PYMAP)
 [![CI Pipeline](https://github.com/JoshuaDRose/PYMAP/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/JoshuaDRose/PYMAP/actions/workflows/main.yml)
 ![GitHub top language](https://img.shields.io/github/languages/top/JoshuaDRose/PYMAP)
 ![lastcommit](https://img.shields.io/github/last-commit/JoshuaDRose/PYMAP)
