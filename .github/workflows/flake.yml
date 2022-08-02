@@ -22,4 +22,4 @@ jobs:
           pip install --upgrade pip
           pip install -r 'src/requirements.txt'
           pip install flake8
-          flake .
+          flake8 .
