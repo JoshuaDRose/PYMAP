@@ -18,8 +18,8 @@ class Player():
 	def draw(self):
 		# pause = 25+self.width/2....
 		self.main_surface.blit(self.pause, (25 + self.width / 2 - self.pause.get_width() / 2, 60 / 2 - self.pause.get_height() / 2))
-		self.main_surface.blit(self.play_icon, (-25 + self.width / 2 - self.play_icon.get_width()/2, 60 / 2 - self.play_icon.get_height() / 2))
-		self.main_surface.blit(self.skip_forward, (615.0 / 7 +self.width / 2 - self.skip_forward.get_width() / 2, 60 / 2 - self.skip_forward.get_height() / 2))
-		self.main_surface.blit(self.skip_back, (-615.0 / 7 +self.width / 2 - self.skip_back.get_width() / 2, 60 / 2 - self.skip_back.get_height() / 2))
+		self.main_surface.blit(self.play_icon, (-25 + self.width / 2 - self.play_icon.get_width() / 2, 60 / 2 - self.play_icon.get_height() / 2))
+		self.main_surface.blit(self.skip_forward, (615.0 / 7 + self.width / 2 - self.skip_forward.get_width() / 2, 60 / 2 - self.skip_forward.get_height() / 2))
+		self.main_surface.blit(self.skip_back, (-615.0 / 7 + self.width / 2 - self.skip_back.get_width() / 2, 60 / 2 - self.skip_back.get_height() / 2))
 		self.surface.blit(self.main_surface, (self.xpos, self.ypos))
 		
