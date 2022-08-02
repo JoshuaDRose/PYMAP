@@ -1,6 +1,5 @@
 import pygame
 import sys
-import os
 
 """ Debug commands and such """
 def do_console():
